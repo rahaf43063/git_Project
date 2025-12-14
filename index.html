@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Git Commands</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Basic Git Commands</h1>
+            <p>Your quick guide to getting started with Git</p>
+        </header>
+
+        <main>
+            <section class="command-group">
+                <h2>Initialization & Setup</h2>
+                <div class="command-card">
+                    <h3>git init</h3>
+                    <p>Initialize a new local repository in the project folder.</p>
+                    <button class="copy-btn" data-cmd="git init">Copy Command</button>
+                </div>
+            </section>
+
+            <section class="command-group">
+                <h2>Viewing Changes & History</h2>
+                <div class="command-card">
+                    <h3>git log</h3>
+                    <p>Show the commit history of the repository. Example output:</p>
+                    <div>
+                        <button class="copy-btn" data-cmd='git log'>Copy Command</button>
+                    </div>
+                    <div class="code-example">
+                        <p><span class="commit-hash">commit a1b2c3d4e5f67890123456789abcdef12345678</span></p>
+                        <p><span class="commit-author">Author:</span> Your Name &lt;youremail@example.com&gt;</p>
+                        <p><span class="commit-date">Date:</span> Sat Dec 14 08:30:00 2025 +0300</p>
+                        <p class="commit-message">Initial commit</p>
+                        <div class="explanation">
+                            <p><strong>commit a1b2c3d4...</strong> → This is the commit's unique identifier (hash).</p>
+                            <p><strong>Author</strong> → The name and email of the person who made the commit.</p>
+                            <p><strong>Date</strong> → When the commit was created.</p>
+                            <p><strong>Message</strong> → The commit message describing the changes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-card">
+                    <h3>git log --oneline</h3>
+                    <p>Show a summarized commit history (IDs and messages only).</p>
+                    <button class="copy-btn" data-cmd='git log --oneline'>Copy Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git log -n 5</h3>
+                    <p>Show a specific number (e.g., the last 5) of the most recent commits.</p>
+                    <button class="copy-btn" data-cmd='git log -n 5'>Copy Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git checkout &lt;id&gt;</h3>
+                    <p>Switch to a specific commit or branch (used to view old versions of the code).</p>
+                    <button class="copy-btn" data-cmd='git checkout commit_id'>Copy Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git diff</h3>
+                    <p>Show changes between commits, commit and working tree, etc.</p>
+                    <button class="copy-btn" data-cmd='git diff'>Copy Command</button>
+                </div>
+            </section>
+
+            <section class="command-group">
+                <h2>Branch Management</h2>
+                <div class="command-card">
+                    <h3>git branch</h3>
+                    <p>List all local branches in your repository. The current branch is marked with an asterisk (*).
+                    </p>
+                    <button class="copy-btn" data-cmd='git branch'>Copy Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git branch &lt;branch-name&gt;</h3>
+                    <p>Create a new branch with the specified name, but don't switch to it.</p>
+                    <button class="copy-btn" data-cmd='git branch new-branch'>Copy Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git checkout &lt;branch&gt;</h3>
+                    <p>Switch to an existing branch, updating the working directory to match the branch.</p>
+                    <button class="copy-btn" data-cmd='git checkout branch-name'>Copy Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git checkout -b &lt;branch&gt;</h3>
+                    <p>Create and switch to a new branch in one command.</p>
+                    <button class="copy-btn" data-cmd='git checkout -b new-branch'>Copy Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git branch -m &lt;new-name&gt;</h3>
+                    <p>Rename the current branch to a new name.</p>
+                    <button class="copy-btn" data-cmd='git branch -m new-branch-name'>Copy Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git branch -d &lt;branch-name&gt;</h3>
+                    <p>Delete a local branch (only if it has been merged).</p>
+                    <button class="copy-btn" data-cmd='git branch -d branch-to-delete'>Copy Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git branch -D &lt;branch-name&gt;</h3>
+                    <p>Force delete a local branch (even if it contains unmerged changes).</p>
+                    <button class="copy-btn" data-cmd='git branch -D branch-to-delete'>Copy Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git merge &lt;branch&gt;</h3>
+                    <p>Merge the specified branch into the current branch.</p>
+                    <button class="copy-btn" data-cmd='git merge branch-to-merge'>Copy Command</button>
+                </div>
+            </section>
+
+            <section class="command-group">
+                <h2>Undoing Changes</h2>
+                <div class="command-card">
+                    <h3>git rm &lt;file&gt;</h3>
+                    <p>Remove a file from the repository and your local system.</p>
+                    <button class="copy-btn" data-cmd="git rm filename">Copy Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git rm --cached &lt;file&gt;</h3>
+                    <p>Remove a file from the staging area only (keep it on your local system).</p>
+                    <button class="copy-btn" data-cmd="git rm --cached filename">Copy Command</button>
+                </div>
+            </section>
+
+            <section class="command-group">
+                <h2>Git Configuration</h2>
+                <div class="command-card">
+                    <h3>git config --global user.name "Your Name"</h3>
+                    <p>Set your Git username for all repositories on your computer.</p>
+                    <button class="copy-btn" data-cmd='git config --global user.name "Your Name"'>Copy Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git config --global user.email "your.email@example.com"</h3>
+                    <p>Set your Git email for all repositories on your computer.</p>
+                    <button class="copy-btn" data-cmd='git config --global user.email "your.email@example.com"'>Copy
+                        Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git config user.name</h3>
+                    <p>Display your current Git username configuration.</p>
+                    <button class="copy-btn" data-cmd='git config user.name'>Copy Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git config user.email</h3>
+                    <p>Display your current Git email configuration.</p>
+                    <button class="copy-btn" data-cmd='git config user.email'>Copy Command</button>
+                </div>
+            </section>
+
+            <section class="command-group">
+                <h2>GitHub Repository Setup</h2>
+                <div class="command-card">
+                    <h3>git branch -M main</h3>
+                    <p>Rename the current branch to 'main' (if you're using a different branch name)</p>
+                    <button class="copy-btn" data-cmd='git branch -M main'>Copy Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git remote add origin https://github.com/username/repo.git</h3>
+                    <p>Connect your local repository to a GitHub repository (replace with your GitHub repository URL)
+                    </p>
+                    <button class="copy-btn" data-cmd='git remote add origin https://github.com/username/repo.git'>Copy
+                        Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git push -u origin main</h3>
+                    <p>Push your local commits to the remote repository and set up tracking</p>
+                    <button class="copy-btn" data-cmd='git push -u origin main'>Copy Command</button>
+                </div>
+            </section>
+
+            <section class="command-group">
+                <h2>Modifying and Uploading an Existing Project on GitHub</h2>
+                <div class="command-card">
+                    <h3>git add .</h3>
+                    <p>Adds all changes to the staging area.</p>
+                    <p class="note">Prepares all modified or new files for the next commit.</p>
+                    <button class="copy-btn" data-cmd='git add .'>Copy Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git commit -m "message"</h3>
+                    <p>Creates a new commit with the added changes (replace "message" with your description).</p>
+                    <p class="note">A commit is a historical reference snapshot of your project's changes.</p>
+                    <button class="copy-btn" data-cmd='git commit -m "message"'>Copy Command</button>
+                </div>
+                <div class="command-card">
+                    <h3>git push</h3>
+                    <p>Uploads local commits to the remote repository (GitHub).</p>
+                    <p class="note">Makes your changes available online.</p>
+                    <button class="copy-btn" data-cmd='git push'>Copy Command</button>
+                </div>
+            </section>
+
+            <section class="command-group">
+                <h2>Terminal Commands</h2>
+                <div class="command-card">
+                    <h3>clear</h3>
+                    <p>Clear the terminal screen.</p>
+                    <button class="copy-btn" data-cmd='clear'>Copy Command</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Git Commands Reference</h3>
+                    <p>A comprehensive guide to essential Git commands for developers</p>
+                </div>
+                <div class="footer-credits">
+                    <p>Created with <i class="fa-solid fa-heart fa-beat" style="color: #6366f1;"></i> by <strong>Rahaf
+                            Farhat</strong></p>
+                    <p class="copyright">&copy; 2025 All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
